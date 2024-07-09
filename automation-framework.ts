@@ -1,4 +1,4 @@
-import { Locator, Page, chromium, expect } from '@playwright/test';
+import { Locator, Page, chromium } from '@playwright/test';
 
 export type LocatorType = 'locator' | 'text' | 'label' | 'placeholder' | 'altText' | 'title' | 'testId' | 'role';
 
@@ -9,7 +9,7 @@ export interface LocatorObject {
 
 export type ElementsObject = LocatorObject[];
 
-export class Playwright {
+export class AutomationFramework {
   readonly page: Page;
   static page: Page;
 
@@ -37,11 +37,14 @@ export class Playwright {
   async type(element: Locator, text: string) {
     const visible = await element.isVisible();
     if (visible) {
-      await element.pressSequentially(text);
+      await element.type(text);
     }
   }
 
   static async fillField(element: Locator, text: string) {
+    if (!element) {
+      throw new Error(`Attempted to fill "${element}" with text "${text}"`);
+    }
     await element.fill(text);
   }
 
@@ -49,7 +52,7 @@ export class Playwright {
     const browser = await chromium.launch();
     const context = await browser.newContext();
     const page = await context.newPage();
-    await Playwright.loadURL(url, page);
+    await AutomationFramework.loadURL(url, page);
     return page;
   }
 

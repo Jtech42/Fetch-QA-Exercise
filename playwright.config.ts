@@ -1,10 +1,14 @@
-import { defineConfig } from '@playwright/test';
+import { PlaywrightTestConfig } from '@playwright/test';
 
-export default defineConfig({
-  testDir: './tests',
+const config: PlaywrightTestConfig = {
   use: {
-    headless: false, // Set to true if you want to run tests in headless mode
+    headless: false,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true
-  }
-});
+  },
+  timeout: 30000,
+  retries: 1,
+  testDir: './tests'
+};
+
+export default config;
