@@ -4,14 +4,7 @@ This repository contains an exercise setup for using Playwright with TypeScript 
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
-
-- You have a computer running a modern operating system (Windows, macOS, or Linux).
-- You have administrative privileges to install software.
-
-## Getting Started
-
-Follow these steps to get the project up and running on your local machine.
+Follow these steps to get the test up and running on your local machine.
 
 ### 1. Clone the Repository
 
