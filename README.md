@@ -15,7 +15,7 @@ git clone https://github.com/Jtech42/Fetch-QA-Exercise.git
 cd Fetch-QA-Exercise
 2. Install Node.js
 ```
-If you don't have Node.js installed, you can download and install it from the official Node.js website.
+If you don't have Node.js installed, you can download and install it from [the official Node.js website.](https://nodejs.org/en/download/package-manager)
 
 
 Verify the installation by running:
