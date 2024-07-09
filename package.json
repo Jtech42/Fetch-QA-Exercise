@@ -1,0 +1,11 @@
+{
+    "name": "my-playwright-project",
+    "version": "1.0.0",
+    "scripts": {
+      "test": "playwright test"
+    },
+    "devDependencies": {
+      "@playwright/test": "^1.16.0",
+      "typescript": "^4.4.3"
+    }
+  }
